@@ -19,7 +19,15 @@ function authenticateRole(name: string, role: Role)
     }
 }
 
-enum Role { ADMIN, AUTHOR, READ_ONLY };
+// enum Role { ADMIN, AUTHOR, READ_ONLY };
+
+let Role; 
+(function (Role) {
+    Role[Role["ADMIN"]  = 0] = "ADMIN";
+    Role[Role["ADMIN2"] = 1] = "ADMIN2";
+    Role[Role["ADMIN3"] = 2] = "ADMIN3";
+}(Role || (Role = {})));
+
 
 const person: {
     name: string,
